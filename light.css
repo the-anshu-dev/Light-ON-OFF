@@ -1,0 +1,102 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #444;
+    min-height: 100vh;
+}
+p
+{
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    text-align: center;
+    position: relative;
+    top: -280px;
+    width: 180px;
+    height: 80px;
+    border: 3px solid #212121;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+label
+{
+    position: relative;
+    top: -280px;
+    width: 150px;
+    height: 75px;
+    background: #212121;
+    border-radius: 10px;
+}
+
+label input
+{
+    appearance: none;
+}
+
+label span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: #333;
+    border: 6px solid #212121;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+label input:checked ~ span
+{
+    left: 75px;
+}
+
+label span .icon
+{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: rgba(255,255,255,0.25);
+    font-size: 2em;
+    transition: .5s;
+}
+
+label input:checked ~ span .icon
+{
+    color: rgba(255,255,255,1);
+    filter: drop-shadow(0 0 5px #fff)
+    drop-shadow(0 0 10px #fff)
+    drop-shadow(0 0 120px #fff)
+    drop-shadow(0 0 115px #fff);
+}
+
+.bulb
+{
+    position: absolute;
+    top: 150px;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 348px;
+    height: 400px;
+    pointer-events: none;
+    background: url(bulb.png);
+    transition: .5s;
+}
+label input:checked ~ .bulb
+{
+    filter: drop-shadow(0 0 85px #ffef30)
+    drop-shadow(0 0 25px #ffef30)
+    drop-shadow(600px 600px 600px #ffef30)
+    drop-shadow(0 0 85px #ffef30);
+}
